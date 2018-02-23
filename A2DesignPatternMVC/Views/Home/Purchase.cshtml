@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Purchase Page";
+}
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            
+
+            <ul class="list-unstyled components">
+
+                <li class="active">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        Панель управлiння
+                    </a>
+
+                </li>
+                <li>
+
+                    <a href="#operationSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-duplicate"></i>
+                        Операції
+                    </a>
+                    <ul class="collapse list-unstyled" id="operationSubmenu">
+                        <li><a href="#">Отримання рахунку</a></li>
+                        <li><a href="#">Придбання</a></li>
+                        <li><a href="#">Оплата</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#catalogSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-book"></i>
+                        Довідники
+                    </a>
+                    <ul class="collapse list-unstyled" id="catalogSubmenu">
+                        <li><a href="#">Склади</a></li>
+                        <li>@Html.ActionLink("Контрагенти", "Partners", "Purchase")</li>
+                        
+                        <li><a href="#">Об'єкти обліку</a></li>
+                        <li><a href="#">Одиниці виміру</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            
+
+
+           
+
+        </div>
+    </div>
+   
+</body>
