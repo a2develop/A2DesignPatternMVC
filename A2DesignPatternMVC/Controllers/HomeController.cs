@@ -13,13 +13,7 @@ namespace A2DesignPatternMVC.Controllers
             return View();
         }
 
-        public ActionResult Purchase()
-        {
-            return View();
-        }
-
         
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

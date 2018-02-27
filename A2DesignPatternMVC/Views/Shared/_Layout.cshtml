@@ -60,13 +60,13 @@
 
         <div id="navbar" class="collapse navbar-collapse">
 
-            <ul class="nav nav-pills">
-                <li>@Html.ActionLink("ГОЛОВНА", "Index", "Home")</li>
-                <li>@Html.ActionLink("ПРИДБАННЯ", "Purchase", "Home")</li>
-                <li>@Html.ActionLink("РЕАЛIЗАЦIЯ", "Index", "Home")</li>
-                <li>@Html.ActionLink("УПРАВЛIННЯ ЗАПАСАМИ", "Index", "Home")</li>
-                <li>@Html.ActionLink("БУХГАЛТЕРIЯ", "Index", "Home")</li>
-                <li>@Html.ActionLink("ПЕРСОНАЛ", "Index", "Home")</li>
+            <ul id="navbarList" class="nav nav-pills">
+                <li id="homeNav">@Html.ActionLink("ГОЛОВНА", "Index", "Home")</li>
+                <li id="purchaseNav">@Html.ActionLink("ПРИДБАННЯ", "Purchase", "Purchase")</li>
+                <li id="sellingNav">@Html.ActionLink("РЕАЛIЗАЦIЯ", "Index", "Selling")</li>
+                <li id="inventoryNav">@Html.ActionLink("УПРАВЛIННЯ ЗАПАСАМИ", "Index", "Inventory")</li>
+                <li id="accountingNav">@Html.ActionLink("БУХГАЛТЕРIЯ", "Index", "Accounting")</li>
+                <li id="personelNav">@Html.ActionLink("ПЕРСОНАЛ", "Index", "Personel")</li>
 
             </ul>
 
@@ -95,7 +95,23 @@
             $('#sidebar').toggleClass('active');
             $(this).toggleClass('active');
         });
+        
     });
+
+    $(".sidebar a").on("click", function(){
+        $(".sidebar").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+    });
+
+    $(function () {
+        $("#navbar").find("li").children("a").each(function () {
+            if ($(this).attr("href") === window.location.pathname) {
+                $(this).parent().addClass("navbar-default");
+            }
+        });
+        
+    });
+    
 </script>
 
 
