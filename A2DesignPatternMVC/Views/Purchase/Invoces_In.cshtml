@@ -1,12 +1,155 @@
-﻿   
-    
-<div id="content">
+﻿<div id="content">
+    <div class="card">
 
-    <h2>Invoices</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    
+        <div class="card-body">
+            <div class="btn-group">
+                <a class="btn" href="#">
+                    <i class="icon-plus"> Створити</i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="icon-edit"> Вiдкрити</i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="icon-cut"> Видалити</i>
+                </a>
+
+                <a class="btn" href="#">
+                    <i class="icon-refresh"> Оновити</i>
+                </a>
+            </div>
+            <!--Table-->
+            <table id="table_example" class="table table-bordered table-hover" cellspacing="50" width="100%">
+
+                <thead>
+                    <tr class="table-warning">
+                        <th visible="Allways">Код</th>
+                        <th visible="lg">Стан</th>
+                        <th visible="lg">Дата</th>
+                        <th visible="lg">Номер</th>
+                        <th>Постачальник</th>
+                        <th visible="lg">Сума</th>
+                        <th>Примiтка</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>19.02.2018</td>
+                        <td>1002</td>
+                        <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                        <td>200.50</td>
+                        <td>Це все що нам вiдомо</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>19.02.2018</td>
+                        <td>1002</td>
+                        <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                        <td>200.50</td>
+                        <td>Це все що нам вiдомо</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>19.02.2018</td>
+                        <td>1002</td>
+                        <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                        <td>200.50</td>
+                        <td>Це все що нам вiдомо</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>19.02.2018</td>
+                        <td>1002</td>
+                        <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                        <td>200.50</td>
+                        <td>Це все що нам вiдомо</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td>19.02.2018</td>
+                        <td>1002</td>
+                        <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                        <td>200.50</td>
+                        <td>Це все що нам вiдомо</td>
+                    </tr>
+
+
+
+
+
+
+                </tbody>
+
+            </table>
+            <!--Table-->
+
+
+        </div>
+    </div>
+
+    <div class="modal fade modal-fullscreen" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Modal title</h4>
+
+                </div>
+                <div class="modal-body">
+                    <p class="">One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
 </div>
+
+<script type="text/javascript">
+    //$.noConflict();
+    //$(document).ready(function () {
+    //    $('#example').DataTable();
+    //});
+    $('#table_example').click(function() {
+     
+        $('#myModalFullscreen').appendTo("body").modal('show');
+    });
+</script>
+@*<div id="content">
+
+
+        <div class="card card-body">
+
+            <div class="btn-group">
+                <a class="btn" href="#">
+                    <i class="icon-edit"></i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="icon-cut"></i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="icon-copy"></i>
+                </a>
+                <a class="btn" href="#">
+                    <i class="icon-paste"></i>
+                </a>
+            </div>
+        </div>
+    </div>*@
 
 
 

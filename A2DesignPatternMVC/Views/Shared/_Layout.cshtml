@@ -6,58 +6,63 @@
     <title>@ViewBag.Title - Book keepeR SaaS</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
 
 
 <body>
-<nav class="navbar navbar-default">
-    
-    <div class="container-fluid">
-        <button type="button" id="sidebarCollapse" class="navbar-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="navbar-header">
+    <nav class="navbar navbar-default">
 
-            <a href="#" class="navbar-brand">Book keepeR</a>
 
-        </div>
+        <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-header">
 
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user"></span>
-                    <strong>Daniel</strong>
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <div class="navbar-login">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <p class="text-center">
-                                        <span class="glyphicon glyphicon-user icon-size"></span>
-                                    </p>
-                                </div>
-                                <div class="col-lg-8">
-                                    <p class="text-left"><strong>Daniel ILYIN</strong></p>
-                                    <p class="text-left small">soulcage@mail.ru</p>
-                                    <p class="text-left">
-                                        <a href="#" class="btn btn-primary btn-block btn-sm">Профiль</a>
-                                    </p>
+                <a href="#" class="navbar-brand">BookkeepeR</a>
+
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <strong>Daniel</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-login">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="text-center">
+                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-left"><strong>Daniel ILYIN</strong></p>
+                                        <p class="text-left small">soulcage@mail.ru</p>
+                                        <p class="text-left">
+                                            <a href="#" class="btn btn-primary btn-block btn-sm">Профiль</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
 
-                </ul>
-            </li>
-        </ul>
-
-
+                    </ul>
+                </li>
+            </ul>
+        </div>
         <div id="navbar" class="collapse navbar-collapse">
 
             <ul id="navbarList" class="nav nav-pills">
@@ -71,48 +76,53 @@
             </ul>
 
         </div><!--/.nav-collapse -->
+    </nav>
 
+
+
+    <div class="wrapper">
+        @RenderBody()
     </div>
-</nav>
-
-       
-
-        <div class="container body-content">
-            @RenderBody()
-            
-            
-        </div>
-
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
 
 
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-            $(this).toggleClass('active');
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+
+
+    @RenderSection("scripts", required: false)
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
         });
-        
-    });
 
-    $(".sidebar a").on("click", function(){
-        $(".sidebar").find(".active").removeClass("active");
-        $(this).parent().addClass("active");
-    });
-
-    $(function () {
-        $("#navbar").find("li").children("a").each(function () {
-            if ($(this).attr("href") === window.location.pathname) {
-                $(this).parent().addClass("navbar-default");
-            }
+        $(".sidebar a").on("click", function () {
+            $(".sidebar").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
         });
-        
-    });
-    
-</script>
+
+        $(function () {
+            $("#navbar").find("li").children("a").each(function () {
+                if ($(this).attr("href") === window.location.pathname) {
+                    $(this).parent().addClass("navbar-default");
+                }
+            });
+
+        });
+
+
+
+    </script>
 
 
 

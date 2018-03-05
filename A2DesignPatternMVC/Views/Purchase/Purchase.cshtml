@@ -4,24 +4,23 @@
 
 <body>
 
-    <div class="wrapper">
-        <!-- Sidebar Holder -->
-        @Html.Partial("_PurchaseSideBar")
 
-        <!-- Page Content Holder -->
-        <div id="content">
+    <!-- Sidebar Holder -->
+    @Html.Partial("_PurchaseSideBar")
 
-
+    <!-- Page Content Holder -->
+    <div class="row" id="content" width="100%">
 
 
-
-        </div>
     </div>
+
 
 
 </body>
 
 <script src="../../Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
 <script type="text/javascript">
     $(function () {
         $('#option1').click(function () {
@@ -29,6 +28,26 @@
                 $('#content').replaceWith(data);
             });
         });
+
+        $('#option2').click(function () {
+            $.get('@Url.Action("GetInviceIn","Purchase")', function (data) {
+                $('#content').replaceWith(data);
+            });
+        });
+
+        $('#option3').click(function () {
+            $.get('@Url.Action("GetInviceIn","Purchase")', function (data) {
+                $('#content').replaceWith(data);
+            });
+        });
+
+        $('#option4').click(function () {
+            $.get('@Url.Action("GetInviceIn","Purchase")', function (data) {
+                $('#content').replaceWith(data);
+            });
+        });
+
+        
     });
 </script>
 
