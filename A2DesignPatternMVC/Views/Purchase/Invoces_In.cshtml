@@ -2,20 +2,22 @@
     <div class="card">
 
         <div class="card-body">
-            <div class="btn-group">
-                <a class="btn" href="#">
-                    <i class="icon-plus"> Створити</i>
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-edit"> Вiдкрити</i>
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-cut"> Видалити</i>
-                </a>
+            
+            <div class="tabletoolbar page-toolbar">
+                <button title="Створити" class="btn btn-tb">
+                    <i class="fa fa-plus fa-lg"></i> Створити
+                </button>
+                <button title="Вiдкрити" class="btn btn-tb">
+                    <i class="fa fa-edit fa-lg"></i> Вiдкрити
+                </button>
+                <button title="Видалити" class="btn btn-tb">
+                    <i class="fa fa-times fa-lg"></i> Видалити
+                </button>
+                <button title="Оновити" class="btn btn-tb">
+                    <i class="fa fa-refresh fa-lg"></i> Оновити
+                </button>
 
-                <a class="btn" href="#">
-                    <i class="icon-refresh"> Оновити</i>
-                </a>
+
             </div>
             <!--Table-->
             <table id="table_example" class="table table-bordered table-hover" cellspacing="50" width="100%">
@@ -99,18 +101,170 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Modal title</h4>
+                    <div class="toolbar page-toolbar">
+                        <button title="Зберегти"  class="btn btn-tb">
+                            <i class="fa fa-save fa-lg"></i> Зберегти
+                            
+                        </button>
+                        <button title="Зберегти та закрити"  class="btn btn-tb">
+                            <i class="fa fa-file-o fa-lg"></i> Зберегти та закрити
+                        </button>
+                        <button title="Оновити" class="btn btn-tb">
+                            <i class="fa fa-refresh fa-lg"></i> Оновити
+                        </button>
+                        <div role="separator" class="divider">
+
+                        </div>
+                        <button class="btn btn-tb" >
+                            <i class="fa fa-cog fa-lg"></i> Провести
+                        </button><!---->
+                        <button class="btn btn-tb">
+                            <i class="fa fa-print fa-lg"></i> Друк
+                        </button>
+                        <div class="aligner"></div>
+                        <button class="btn btn-tb" data-dismiss="modal">
+                            <i class="fa fa-close fa-lg"  ></i> Закрити
+                        </button>
+                    </div>
 
                 </div>
                 <div class="modal-body">
-                    <p class="">One fine body…</p>
+                    <div class="card">
+                        <form id="invoice-form" role="form">
+                            <div class="row">
+                                <div class="form-group col-xs-3">
+                                    <h3>Рахунок</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-3">
+                                    <div class="control-group required">
+
+                                        <label class="control-label" for="invoiceId">Номер</label>
+                                        <div class="controls">
+                                            <input class="form-control" id="invoiceId" maxlength="30" name="InvoiceNomber" type="text" />
+                                        </div>
+                                        <label class="control-label" for="invoiceDate">Дата</label>
+                                        <div class="controls">
+                                            <input class="form-control" id="invoiceDate" maxlength="12" name="InvoiceDate" type="date" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-3">
+                                    <div class="control-group">
+
+                                        <label class="control-label" for="partnerId">Постачальник</label>
+                                        <div class="input-group">
+                                            <input class="form-control" id="partnerId" maxlength="100" name="PartnerName" type="text" />
+                                            <span class="input-group-addon" id="searchPartnerBtn">
+
+                                                <span class="fa fa-search"></span>
+                                            </span>
+                                        </div>
+                                        <label class="control-label" for="projectId">Проект</label>
+                                        <div class="input-group">
+                                            <input class="form-control" id="projectId" maxlength="100" name="ProjectName" type="text" />
+                                            <span class="input-group-addon" id="searchProjectBtn">
+
+                                                <span class="fa fa-search"></span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-3">
+                                    <div class="control-group required">
+                                        <label class="control-label" for="EDRPOU">Код ЄДРПОУ</label>
+                                        <div class="controls">
+                                            <input class="form-control" id="EDRPOU" maxlength="20" name="PartnerEDRPOU" type="text" />
+                                        </div>
+                                        <label class="control-label" for="contractId">Договiр</label>
+                                        <div class="controls">
+                                            <input class="form-control" id="contractId" maxlength="30" name="ContractName" type="text" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            
+                        </form>
+                        
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                    
+                                <label for="comment">Примiтка</label>
+                                <textarea class="form-control" id="comment"></textarea>
+                                    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <span>
+
+                    </span>
+                    <div class="card">
+                        <div class="tabletoolbar page-toolbar">
+                            <button title="Створити" class="btn btn-tb">
+                                <i class="fa fa-plus fa-lg"></i> Додати рядок
+                            </button>
+                            
+                        </div>
+                        <table id="tablepartInvoice" class="table table-bordered table-hover" cellspacing="50" width="100%">
+
+                            <thead>
+                            <tr class="table-warning">
+                                <th class="col-md-1">№ з.п.</th>
+                                <th class="col-md-1">Артикул</th>
+                                <th class="col-md-9">Об'єкт</th>
+                                <th class="col-md-1">Од. вим.</th>
+                                <th class="col-md-1">Кiлькiсть</th>
+                                <th class="col-md-1">Цiна</th>
+                                <th class="col-md-1">Сума</th>
+                                <th class="col-md-1"> </th>
+
+                            </tr>
+                            </thead>
+
+                            <tbody>
+
+                            <tr>
+                                <td>1</td>
+                                <td>123ПА</td>
+                                <td>Генделик</td>
+                                <td>шт.</td>
+
+                                <td>5</td>
+                                <td>20</td>
+                                <td>100</td>
+                                <td>X</td>
+                            </tr>
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th>Разом</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>100</th>
+                                <th></th>
+
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+
+                    @*<div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>*@
                 </div>
-            </div>
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
@@ -120,36 +274,23 @@
 </div>
 
 <script type="text/javascript">
-    //$.noConflict();
-    //$(document).ready(function () {
-    //    $('#example').DataTable();
-    //});
+
     $('#table_example').click(function() {
      
         $('#myModalFullscreen').appendTo("body").modal('show');
     });
+
+    $('#searchPartnerBtn').click(function () {
+
+        alert("Test");
+    });
+
+    $('#searchProjectBtn').click(function () {
+
+        alert("Test2");
+    });
+
 </script>
-@*<div id="content">
-
-
-        <div class="card card-body">
-
-            <div class="btn-group">
-                <a class="btn" href="#">
-                    <i class="icon-edit"></i>
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-cut"></i>
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-copy"></i>
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-paste"></i>
-                </a>
-            </div>
-        </div>
-    </div>*@
 
 
 
