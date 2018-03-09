@@ -102,6 +102,7 @@ tfoot td {
 }
 textarea {
     min-width: 100%;
+    resize: none;
 }
 
 .btn {
