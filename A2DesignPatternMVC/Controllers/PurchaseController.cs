@@ -18,5 +18,10 @@ namespace A2DesignPatternMVC.Controllers
         {
             return PartialView("Invoces_In");
         }
+
+        public ActionResult GetPartners()
+        {
+            return PartialView("Partners");
+        }
     }
 }

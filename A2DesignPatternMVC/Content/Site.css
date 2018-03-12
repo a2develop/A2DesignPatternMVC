@@ -82,7 +82,19 @@ i, span {
     height: 100%;
     border-radius: 3px;
 }
+.col-lg-4 {
+    height: 100%;
+    padding: 1px;
+}
+.col-lg-8 {
+    height: 100%;
+    padding: 1px;
+    padding-left: 10px;
+}
 
+input, select, textarea {
+    max-width: 100%;
+}
 
 thead th {
     background-color: #D9EDF6;

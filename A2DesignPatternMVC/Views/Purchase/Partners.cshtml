@@ -1,0 +1,175 @@
+﻿<div id="content">
+    
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <div id="tree1" class="treeview">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-8">
+            <div class="card">
+
+                <div class="card-body">
+
+                    <div class="tabletoolbar page-toolbar">
+                        <button title="Створити" class="btn btn-tb">
+                            <i class="fa fa-plus fa-lg"></i> Створити
+                        </button>
+                        <button title="Вiдкрити" class="btn btn-tb">
+                            <i class="fa fa-edit fa-lg"></i> Вiдкрити
+                        </button>
+                        <button title="Видалити" class="btn btn-tb">
+                            <i class="fa fa-times fa-lg"></i> Видалити
+                        </button>
+                        <button title="Оновити" class="btn btn-tb">
+                            <i class="fa fa-refresh fa-lg"></i> Оновити
+                        </button>
+
+
+                    </div>
+                    <!--Table-->
+                    <table id="table_example" class="table table-bordered table-hover" cellspacing="50" width="100%">
+
+                        <thead>
+                        <tr class="table-warning">
+                            <th visible="Allways">Код</th>
+                            <th visible="lg">Стан</th>
+                            <th visible="lg">Дата</th>
+                            <th visible="lg">Номер</th>
+                            <th>Постачальник</th>
+                            <th visible="lg">Сума</th>
+                            <th>Примiтка</th>
+
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td>19.02.2018</td>
+                            <td>1002</td>
+                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                            <td>200.50</td>
+                            <td>Це все що нам вiдомо</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td>19.02.2018</td>
+                            <td>1002</td>
+                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                            <td>200.50</td>
+                            <td>Це все що нам вiдомо</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td>19.02.2018</td>
+                            <td>1002</td>
+                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                            <td>200.50</td>
+                            <td>Це все що нам вiдомо</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td>19.02.2018</td>
+                            <td>1002</td>
+                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                            <td>200.50</td>
+                            <td>Це все що нам вiдомо</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td>19.02.2018</td>
+                            <td>1002</td>
+                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
+                            <td>200.50</td>
+                            <td>Це все що нам вiдомо</td>
+                        </tr>
+
+
+
+
+
+
+                        </tbody>
+
+                    </table>
+                    <!--Table-->
+
+
+                </div>
+            </div>
+        </div>
+   
+</div>
+
+<script type="text/javascript">
+
+    var defaultData = [
+        {
+            text: 'Parent 1',
+            href: '#parent1',
+            tags: ['4'],
+            nodes: [
+                {
+                    text: 'Child 1',
+                    href: '#child1',
+                    tags: ['2'],
+                    nodes: [
+                        {
+                            text: 'Grandchild 1',
+                            href: '#grandchild1',
+                            tags: ['0']
+                        },
+                        {
+                            text: 'Grandchild 2',
+                            href: '#grandchild2',
+                            tags: ['0']
+                        }
+                    ]
+                },
+                {
+                    text: 'Child 2',
+                    href: '#child2',
+                    tags: ['0']
+                }
+            ]
+        },
+        {
+            text: 'Parent 2',
+            href: '#parent2',
+            tags: ['0']
+        },
+        {
+            text: 'Parent 3',
+            href: '#parent3',
+            tags: ['0']
+        },
+        {
+            text: 'Parent 4',
+            href: '#parent4',
+            tags: ['0']
+        },
+        {
+            text: 'Parent 5',
+            href: '#parent5'  ,
+            tags: ['0']
+        }
+    ];
+
+    $('#tree1').treeview({ data: defaultData});
+
+</script>
+
+
+
