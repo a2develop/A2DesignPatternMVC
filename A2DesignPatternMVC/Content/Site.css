@@ -82,6 +82,14 @@ i, span {
     height: 100%;
     border-radius: 3px;
 }
+
+.treeview {
+    padding: 20px;
+    
+    width: 100%;
+    height: 100%;
+}
+
 .col-lg-4 {
     height: 100%;
     padding: 1px;
@@ -432,6 +440,16 @@ a.article, a.article:hover {
         box-sizing: border-box;
     }
 
+.tabletoolbar > .divider {
+    display: inline-block;
+    width: 2px;
+    border-right: 1px solid #e6e5e6;
+    align-self: stretch;
+    background-color: #b5b1b5;
+    margin: 1px 4px;
+    box-sizing: border-box;
+}
+
 .toolbar .btn-tb {
         white-space: nowrap;
         background-color: transparent;
@@ -547,7 +565,7 @@ a.article, a.article:hover {
 
 /* align icon */
 .left-addon .fa  { left:  0px;}
-.right-addon .fa { right: 25px;}
+.right-addon .fa { right: 5px;}
 
 /* add padding  */
 .left-addon input  { padding-left:  30px; }

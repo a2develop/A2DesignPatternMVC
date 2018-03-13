@@ -1,13 +1,8 @@
 ﻿<div id="content">
     
         <div class="col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <div id="tree1" class="treeview">
+            <div id="tree1" class="treeview">
 
-                    </div>
-
-                </div>
             </div>
 
         </div>
@@ -21,11 +16,24 @@
                             <i class="fa fa-plus fa-lg"></i> Створити
                         </button>
                         <button title="Вiдкрити" class="btn btn-tb">
-                            <i class="fa fa-edit fa-lg"></i> Вiдкрити
+                            <i class="fa fa-edit fa-lg"></i> Змiнити
                         </button>
                         <button title="Видалити" class="btn btn-tb">
                             <i class="fa fa-times fa-lg"></i> Видалити
                         </button>
+
+                        <div role="separator" class="divider" />
+
+                        
+                        
+                        <div class="inner-addon right-addon">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control" placeholder="фрагмент назви або коду" />
+                        </div>
+                        <div role="separator" class="divider">
+
+                        </div>
+
                         <button title="Оновити" class="btn btn-tb">
                             <i class="fa fa-refresh fa-lg"></i> Оновити
                         </button>
@@ -37,12 +45,9 @@
 
                         <thead>
                         <tr class="table-warning">
-                            <th visible="Allways">Код</th>
-                            <th visible="lg">Стан</th>
-                            <th visible="lg">Дата</th>
-                            <th visible="lg">Номер</th>
-                            <th>Постачальник</th>
-                            <th visible="lg">Сума</th>
+                            <th visible="Allways">ID</th>
+                            <th visible="lg">Назва</th>
+                            <th visible="lg">Код</th>
                             <th>Примiтка</th>
 
                         </tr>
@@ -52,55 +57,23 @@
 
                         <tr>
                             <td>1</td>
-                            <td></td>
-                            <td>19.02.2018</td>
+                            <td>ОАО Генделик</td>
                             <td>1002</td>
-                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
-                            <td>200.50</td>
-                            <td>Це все що нам вiдомо</td>
+                            <td>Там наливають</td>
                         </tr>
                         <tr>
-                            <td>1</td>
-                            <td></td>
-                            <td>19.02.2018</td>
-                            <td>1002</td>
-                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
-                            <td>200.50</td>
-                            <td>Це все що нам вiдомо</td>
+                            <td>2</td>
+                            <td>ЧП Пьяна Свиня</td>
+                            <td>1003</td>
+                            <td>Общество трезвостi</td>
                         </tr>
                         <tr>
-                            <td>1</td>
-                            <td></td>
-                            <td>19.02.2018</td>
-                            <td>1002</td>
-                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
-                            <td>200.50</td>
-                            <td>Це все що нам вiдомо</td>
+                            <td>3</td>
+                            <td>ООО Дуратино</td>
+                            <td>1004</td>
+                            <td>Резьба по дереву</td>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td></td>
-                            <td>19.02.2018</td>
-                            <td>1002</td>
-                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
-                            <td>200.50</td>
-                            <td>Це все що нам вiдомо</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td></td>
-                            <td>19.02.2018</td>
-                            <td>1002</td>
-                            <td>ОАО Совгосп iменi паям'ятника Iллiча</td>
-                            <td>200.50</td>
-                            <td>Це все що нам вiдомо</td>
-                        </tr>
-
-
-
-
-
-
+                        
                         </tbody>
 
                     </table>
@@ -117,57 +90,64 @@
 
     var defaultData = [
         {
-            text: 'Parent 1',
-            href: '#parent1',
+            text: 'Контрагенти',
+            icon: "fa fa-th-list",
+            href: '#partners',
             tags: ['4'],
             nodes: [
                 {
-                    text: 'Child 1',
-                    href: '#child1',
+                    text: 'Постачальники',
+                    icon: "fa fa-folder",
+                    href: '#suppliers',
                     tags: ['2'],
                     nodes: [
                         {
-                            text: 'Grandchild 1',
-                            href: '#grandchild1',
+                            text: 'Ригi Анали',
+                            href: '#pr',
                             tags: ['0']
                         },
                         {
-                            text: 'Grandchild 2',
-                            href: '#grandchild2',
+                            text: 'Порохоботи',
+                            href: '#poroh',
                             tags: ['0']
                         }
                     ]
                 },
                 {
-                    text: 'Child 2',
-                    href: '#child2',
-                    tags: ['0']
+                    text: 'Покупцi',
+                    icon: 'fa fa-folder',
+                    href: '#buyers',
+                    tags: ['0'],
+                    nodes: [
+                        {
+                            text: 'Кремлеботи',
+                            href: '#kremlin',
+                            tags: ['0']
+                        },
+                        {
+                            text: 'Тiтушня',
+                            href: '#titushko',
+                            tags: ['0']
+                        }
+                    ]
                 }
             ]
-        },
-        {
-            text: 'Parent 2',
-            href: '#parent2',
-            tags: ['0']
-        },
-        {
-            text: 'Parent 3',
-            href: '#parent3',
-            tags: ['0']
-        },
-        {
-            text: 'Parent 4',
-            href: '#parent4',
-            tags: ['0']
-        },
-        {
-            text: 'Parent 5',
-            href: '#parent5'  ,
-            tags: ['0']
         }
     ];
 
-    $('#tree1').treeview({ data: defaultData});
+    
+    $('#tree1').treeview({
+        data: defaultData,         // data is not optional
+        levels: 5,
+        emptyIcon: "fa fa-folder-o",
+        expandIcon: "fa fa-chevron-right",
+        collapseIcon: "fa fa-chevron-down",
+        backColor: '#FAFAFA',
+        onhoverColor: "#fff8db",
+        //selectedColor:"#7386D5",
+        selectedBackColor: "#7386D5",
+        showBorder: false
+    });
 
 </script>
 
