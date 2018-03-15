@@ -128,148 +128,148 @@
     </div>
 
 </div>
-<div class="modal-body">
-    <div class="card">
-        <form id="invoice-form" role="form">
-            <div class="row">
-                <div class="form-group col-xs-6">
-                    <h3>Рахунок</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="form-group col-xs-2">
-
-
-                    <label class="control-label" for="invoiceId">Номер</label>
-                    <div>
-                        <input class="form-control" id="invoiceId" maxlength="30" name="InvoiceNomber" type="text" />
-                    </div>
-
-
-                </div>
-                <div class="form-group col-xs-2">
-
-
-                    <label class="control-label" for="invoiceDate">Дата</label>
-                    <div>
-                        <input class="form-control" id="invoiceDate" maxlength="12" name="InvoiceDate" type="date" />
-                    </div>
-
-
-                </div>
-
-                <div class="form-group col-xs-6">
-                    <label class="control-label" for="partnerId">Постачальник</label>
-                    <div class="input-group">
-                        <input class="form-control" id="partnerId" maxlength="100" name="PartnerName" type="text" />
-                        <span class="input-group-addon" id="searchPartnerBtn">
-                            <span class="fa fa-search"></span>
-                        </span>
+    <div class="modal-body">
+        <div class="card">
+            <form id="invoice-form" role="form">
+                <div class="row">
+                    <div class="form-group col-xs-6">
+                        <h3>Рахунок</h3>
                     </div>
                 </div>
 
-                <div class="form-group col-xs-2">
-                    <label class="control-label" for="EDRPOU">Код ЄДРПОУ</label>
-                    <div>
-                        <input class="form-control" id="EDRPOU" maxlength="8" name="PartnerEDRPOU" type="text" />
-                    </div>
-                </div>
+                <div class="row">
+                    <div class="form-group col-xs-2">
 
-            </div>
+
+                        <label class="control-label" for="invoiceId">Номер</label>
+                        <div>
+                            <input class="form-control" id="invoiceId" maxlength="30" name="InvoiceNomber" type="text" />
+                        </div>
+
+
+                    </div>
+                    <div class="form-group col-xs-2">
+
+
+                        <label class="control-label" for="invoiceDate">Дата</label>
+                        <div>
+                            <input class="form-control" id="invoiceDate" maxlength="12" name="InvoiceDate" type="date" />
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group col-xs-6">
+                        <label class="control-label" for="partnerId">Постачальник</label>
+                        <div class="input-group">
+                            <input class="form-control" id="partnerId" maxlength="100" name="PartnerName" type="text" />
+                            <span class="input-group-addon" id="searchPartnerBtn">
+                                <span class="fa fa-search"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-2">
+                        <label class="control-label" for="EDRPOU">Код ЄДРПОУ</label>
+                        <div>
+                            <input class="form-control" id="EDRPOU" maxlength="8" name="PartnerEDRPOU" type="text" />
+                        </div>
+                    </div>
+
+                </div>
         
-            <div class="row">
-                <div class="form-group col-xs-4">
-                    <label class="control-label" for="contractId">Договiр</label>
-                    <div >
-                        <input class="form-control" id="contractId" maxlength="30" name="ContractName" type="text" />
+                <div class="row">
+                    <div class="form-group col-xs-4">
+                        <label class="control-label" for="contractId">Договiр</label>
+                        <div >
+                            <input class="form-control" id="contractId" maxlength="30" name="ContractName" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-6">
+                        <label class="control-label" for="projectId">Проект</label>
+                        <div class="input-group">
+                            <input class="form-control" id="projectId" maxlength="100" name="ProjectName" type="text" />
+                            <span class="input-group-addon" id="searchProjectBtn">
+
+                                <span class="fa fa-search"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-group col-xs-6">
-                    <label class="control-label" for="projectId">Проект</label>
-                    <div class="input-group">
-                        <input class="form-control" id="projectId" maxlength="100" name="ProjectName" type="text" />
-                        <span class="input-group-addon" id="searchProjectBtn">
-
-                            <span class="fa fa-search"></span>
-                        </span>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <label for="comment">Примiтка</label>
+                        <textarea class="form-control" rows="2" id="comment"></textarea>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="form-group col-xs-12">
-                    <label for="comment">Примiтка</label>
-                    <textarea class="form-control" rows="2" id="comment"></textarea>
-                </div>
-            </div>
 
             
 
 
 
-        </form>
+            </form>
                         
                         
                         
-    </div>
-<span>
+        </div>
+        <span>
 
-</span>
-<div class="card">
-    <div class="tabletoolbar page-toolbar">
-        <button title="Створити" class="btn btn-tb">
-            <i class="fa fa-plus fa-lg"></i> Додати рядок
-        </button>
+        </span>
+        <div class="card">
+            <div class="tabletoolbar page-toolbar">
+                <button title="Створити" class="btn btn-tb">
+                    <i class="fa fa-plus fa-lg"></i> Додати рядок
+                </button>
                             
+            </div>
+            <table id="tablepartInvoice" class="table table-bordered table-hover" cellspacing="50" width="100%">
+
+                <thead>
+                <tr class="table-warning">
+                    <th class="col-md-1">№ з.п.</th>
+                    <th class="col-md-1">Артикул</th>
+                    <th class="col-md-9">Об'єкт</th>
+                    <th class="col-md-1">Од. вим.</th>
+                    <th class="col-md-1">Кiлькiсть</th>
+                    <th class="col-md-1">Цiна</th>
+                    <th class="col-md-1">Сума</th>
+                    <th class="col-md-1"> </th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>123ПА</td>
+                    <td>Генделик</td>
+                    <td>шт.</td>
+
+                    <td>5</td>
+                    <td>20</td>
+                    <td>100</td>
+                    <td>X</td>
+                </tr>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th>Разом</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>100</th>
+                    <th></th>
+
+                </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
-    <table id="tablepartInvoice" class="table table-bordered table-hover" cellspacing="50" width="100%">
-
-        <thead>
-        <tr class="table-warning">
-            <th class="col-md-1">№ з.п.</th>
-            <th class="col-md-1">Артикул</th>
-            <th class="col-md-9">Об'єкт</th>
-            <th class="col-md-1">Од. вим.</th>
-            <th class="col-md-1">Кiлькiсть</th>
-            <th class="col-md-1">Цiна</th>
-            <th class="col-md-1">Сума</th>
-            <th class="col-md-1"> </th>
-
-        </tr>
-        </thead>
-
-        <tbody>
-
-        <tr>
-            <td>1</td>
-            <td>123ПА</td>
-            <td>Генделик</td>
-            <td>шт.</td>
-
-            <td>5</td>
-            <td>20</td>
-            <td>100</td>
-            <td>X</td>
-        </tr>
-
-        </tbody>
-        <tfoot>
-        <tr>
-            <th>Разом</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th>100</th>
-            <th></th>
-
-        </tr>
-        </tfoot>
-    </table>
-</div>
-</div>
 
 @*<div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -282,18 +282,50 @@
 </div>
 <!-- /.modal -->
 
+<div class="modal fade" id="modalSelectPartnerForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header-small">
+                <span>Нова папка</span>
+
+                <button class="btnclose" data-dismiss="modal">
+                    <i class="fa fa-close fa-lg"></i>
+                </button>
+
+            </div>
+            <div class="modal-body">
+                
+
+            </div>
+
+            <div class="modal-footer">
+                <button disabled="disabled" tabindex="100" class="btn btn-primary">
+                    Зберегти та закрити
+                </button>
+                <button tabindex="101" class="btn btn-default" data-dismiss="modal">
+                    Скасувати
+                </button>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+</div>
+
 </div>
 
 <script type="text/javascript">
 
     $('#table_example').click(function() {
-     
+
         $('#myModalFullscreen').appendTo("body").modal('show');
     });
 
     $('#searchPartnerBtn').click(function () {
 
-        alert("Test");
+        $('#modalSelectPartnerForm').appendTo("body").modal('show');
     });
 
     $('#searchProjectBtn').click(function () {

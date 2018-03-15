@@ -1,90 +1,432 @@
 ﻿<div id="content">
-    
-        <div class="col-lg-4">
-            <div id="tree1" class="treeview">
+
+<div class="col-lg-4">
+    <div class="tabletoolbar page-toolbar" id="addPartnerGroupPanel">
+        <button title="Створити" class="btn btn-tb" id="createPartnerGroupBtn">
+            <i class="fa fa-plus fa-lg"></i> Створити
+        </button>
+        <button title="Вiдкрити" class="btn btn-tb">
+            <i class="fa fa-edit fa-lg"></i> Змiнити
+        </button>
+        <button title="Видалити" class="btn btn-tb">
+            <i class="fa fa-times fa-lg"></i> Видалити
+        </button>
+    </div>
+    <div id="tree1" class="treeview">
+
+    </div>
+
+</div>
+<div class="col-lg-8">
+    <div class="card">
+
+        <div class="card-body">
+
+            <div class="tabletoolbar page-toolbar">
+                <button title="Створити" class="btn btn-tb" id="createPartnerBtn">
+                    <i class="fa fa-plus fa-lg"></i> Створити
+                </button>
+                <button title="Вiдкрити" class="btn btn-tb">
+                    <i class="fa fa-edit fa-lg"></i> Змiнити
+                </button>
+                <button title="Видалити" class="btn btn-tb">
+                    <i class="fa fa-times fa-lg"></i> Видалити
+                </button>
+
+                <div role="separator" class="divider" />
+
+
+
+                <div class="inner-addon right-addon">
+                    <i class="fa fa-search"></i>
+                    <input type="text" class="form-control" placeholder="фрагмент назви або коду" />
+                </div>
+                <div role="separator" class="divider">
+
+                </div>
+
+                <button title="Оновити" class="btn btn-tb">
+                    <i class="fa fa-refresh fa-lg"></i> Оновити
+                </button>
+
+
+            </div>
+            <!--Table-->
+            <table id="table_example" class="table table-bordered table-hover" cellspacing="50" width="100%">
+
+                <thead>
+                <tr class="table-warning">
+                    <th visible="Allways">ID</th>
+                    <th visible="lg">Назва</th>
+                    <th visible="lg">Код</th>
+                    <th>Примiтка</th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>ОАО Генделик</td>
+                    <td>1002</td>
+                    <td>Там наливають</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>ЧП Пьяна Свиня</td>
+                    <td>1003</td>
+                    <td>Общество трезвостi</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>ООО Дуратино</td>
+                    <td>1004</td>
+                    <td>Резьба по дереву</td>
+                </tr>
+
+                </tbody>
+
+            </table>
+            <!--Table-->
+
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalPartnerGroupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header-small">
+                <span>Нова папка</span>
+
+                <button class="btnclose" data-dismiss="modal">
+                    <i class="fa fa-close fa-lg"></i>
+                </button>
+
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#panel1">Загалнi</a></li>
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <span />
+                        <div id="panel1" class="tab-pane fade in active">
+                            <form id="partner-group-form" role="form">
+
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label class="control-label" for="invoiceId">Назва</label>
+                                        <div>
+                                            <input class="form-control" id="invoiceId" maxlength="30" name="InvoiceNomber" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <span />
+                                <span />
+                                <div class="row">
+                                    <div class="form-group col-xs-12">
+                                        <label for="comment">Примiтка</label>
+                                        <textarea class="form-control" rows="4" id="comment"></textarea>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button disabled="disabled" tabindex="100" class="btn btn-primary">
+                    Зберегти та закрити
+                </button>
+                <button tabindex="101" class="btn btn-default" data-dismiss="modal">
+                    Скасувати
+                </button>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+</div>
+
+<div class="modal fade" id="modalPartnerForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header-small">
+    <span>Новий контрагент</span>
+
+    <button class="btnclose" data-dismiss="modal">
+        <i class="fa fa-close fa-lg"></i>
+    </button>
+
+</div>
+<div class="modal-body">
+<div class="card">
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#general-panel">Загалнi</a></li>
+    <li><a data-toggle="tab" href="#contacts-panel">Контакти</a></li>
+    <li><a data-toggle="tab" href="#accounts-panel">Рахунки</a></li>
+</ul>
+
+<div class="tab-content">
+<span />
+<div id="general-panel" class="tab-pane fade in active">
+    <form id="partner-form" role="form">
+
+        <div class="row">
+            <div class="form-group col-xs-12">
+
+                <label class="control-label" for="partnerId">Папка</label>
+                <div class="input-group">
+                    <input class="form-control" id="partnerGroup" maxlength="100" name="partnerGroup" type="text" />
+                    <span class="input-group-addon" id="searchPartnerGroupBtn">
+                        <span class="fa fa-search"></span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-xs-2">
+                <label class="control-label" for="partnerType">Тип</label>
 
             </div>
 
         </div>
-        <div class="col-lg-8">
-            <div class="card">
 
-                <div class="card-body">
+        <div class="row">
 
-                    <div class="tabletoolbar page-toolbar">
-                        <button title="Створити" class="btn btn-tb">
-                            <i class="fa fa-plus fa-lg"></i> Створити
-                        </button>
-                        <button title="Вiдкрити" class="btn btn-tb">
-                            <i class="fa fa-edit fa-lg"></i> Змiнити
-                        </button>
-                        <button title="Видалити" class="btn btn-tb">
-                            <i class="fa fa-times fa-lg"></i> Видалити
-                        </button>
-
-                        <div role="separator" class="divider" />
-
-                        
-                        
-                        <div class="inner-addon right-addon">
-                            <i class="fa fa-search"></i>
-                            <input type="text" class="form-control" placeholder="фрагмент назви або коду" />
-                        </div>
-                        <div role="separator" class="divider">
-
-                        </div>
-
-                        <button title="Оновити" class="btn btn-tb">
-                            <i class="fa fa-refresh fa-lg"></i> Оновити
-                        </button>
-
-
-                    </div>
-                    <!--Table-->
-                    <table id="table_example" class="table table-bordered table-hover" cellspacing="50" width="100%">
-
-                        <thead>
-                        <tr class="table-warning">
-                            <th visible="Allways">ID</th>
-                            <th visible="lg">Назва</th>
-                            <th visible="lg">Код</th>
-                            <th>Примiтка</th>
-
-                        </tr>
-                        </thead>
-
-                        <tbody>
-
-                        <tr>
-                            <td>1</td>
-                            <td>ОАО Генделик</td>
-                            <td>1002</td>
-                            <td>Там наливають</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>ЧП Пьяна Свиня</td>
-                            <td>1003</td>
-                            <td>Общество трезвостi</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>ООО Дуратино</td>
-                            <td>1004</td>
-                            <td>Резьба по дереву</td>
-                        </tr>
-                        
-                        </tbody>
-
-                    </table>
-                    <!--Table-->
-
+            <div class="form-group col-xs-12">
+                <div class="btn-group" data-toggle="buttons" id="partnerType">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Юридична особа
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Фiзична особа
+                    </label>
 
                 </div>
             </div>
+
         </div>
-   
+
+        <div class="row">
+            <div class="form-group col-xs-8">
+                <label class="control-label" for="PartnerName">Назва</label>
+                <div>
+                    <input class="form-control" id="PartnerName" maxlength="30" name="PartnerName" type="text" />
+                </div>
+            </div>
+
+            <div class="form-group col-xs-4">
+                <label class="control-label" for="partnerCode">Код</label>
+                <div>
+                    <input class="form-control" id="partnerCode" maxlength="8" name="partnerCode" type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <label class="control-label" for="partnerFullName">Повна назва</label>
+                <div>
+                    <input class="form-control" id="partnerFullName" maxlength="100" name="partnerFullName" type="text" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-xs-12">
+                <label for="partnerComment">Примiтка</label>
+                <textarea class="form-control" rows="2" id="partnerComment"></textarea>
+            </div>
+        </div>
+
+    </form>
 </div>
+
+<div id="contacts-panel" class="tab-pane fade in active">
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <label class="control-label" for="partnerJurAdress">Юридична адреса</label>
+            <div>
+                <input class="form-control" id="partnerJurAdress" maxlength="100" name="partnerJurAdress" type="text" />
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <label class="control-label" for="partnerAdress">Фактична адреса</label>
+            <div>
+                <input class="form-control" id="partnerAdress" maxlength="100" name="partnerAdress" type="text" />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <label class="control-label" for="partnerTel1">Телефон 1</label>
+            <div>
+                <input class="form-control" id="partnerTel1" maxlength="10" name="partnerTel1" type="text" />
+            </div>
+
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" for="partnerTel2">Телефон 2</label>
+            <div>
+                <input class="form-control" id="partnerTel2" maxlength="10" name="partnerTel2" type="text" />
+            </div>
+
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" for="partnerTel3">Телефон 3</label>
+            <div>
+                <input class="form-control" id="partnerTel3" maxlength="10" name="partnerTel3" type="text" />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <label class="control-label" for="partnerEMail1">EMail 1</label>
+            <div>
+                <input class="form-control" id="partnerEMail1" maxlength="100" name="partnerEMail1" type="text" />
+            </div>
+
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" for="partnerEMail2">EMail 2</label>
+            <div>
+                <input class="form-control" id="partnerEMail2" maxlength="100" name="partnerEMail2" type="text" />
+            </div>
+
+        </div>
+        <div class="form-group col-xs-4">
+            <label class="control-label" for="partnerEMail3">EMail 3</label>
+            <div>
+                <input class="form-control" id="partnerEMail3" maxlength="100" name="partnerEMail3" type="text" />
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <label class="control-label" for="contactName">Контактна особа</label>
+            <div>
+                <input class="form-control" id="contactName" maxlength="100" name="contactName" type="text" />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="accounts-panel" class="tab-pane fade in active">
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <div class="tabletoolbar page-toolbar">
+                <button title="Створити" class="btn btn-tb">
+                    <i class="fa fa-plus fa-lg"></i> Додати рядок
+                </button>
+                            
+            </div>
+            <table id="tablepartInvoice" class="table table-bordered table-hover" cellspacing="50" width="100%">
+                <tbody>
+
+                <tr>
+                    <td rowspan="3" class="valign-middle">1</td>
+                    <td class="no-wrap">Рахунок:</td>
+                    <td class="ctrl">
+                        <div class="control-group invalid"><!---->
+                            <div class="input-group">
+                                <input type="text" class="">
+                            </div> <!---->
+                        </div>
+                    </td>
+                    <td colspan="2" class="ctrl">
+                        <label label="Основний" class="checkbox">
+                            <input type="checkbox"><span>Основний</span>
+                        </label>
+                    </td>
+                    <td rowspan="3" class="valign-middle">
+                        <a class="a2-hyperlink a2-inline small">
+                            <i class="ico ico-delete"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Банк:</td>
+                    <td class="ctrl">
+                        <div class="control-group invalid"><!---->
+                            <div class="input-group">
+                                <input class=""> 
+                                <a tabindex="-1" class="a2-hyperlink a2-inline add-on">
+                                    <i class="ico ico-search"></i>
+                                </a>
+                                                        
+                            </div> <!---->
+                        </div>
+                    </td>
+                    <td>МФО:</td>
+                                            
+                </tr>
+                <tr>
+                    <td>Примітка:</td>
+                    <td colspan="3" class="ctrl">
+                        <div class="control-group valid"><!---->
+                            <div class="input-group">
+                                <input type="text" class=""> <!---->
+                            </div> <!----></div></td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="row-divider"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="modal-footer">
+    <button disabled="disabled" tabindex="100" class="btn btn-primary">
+        Зберегти та закрити
+    </button>
+    <button tabindex="101" class="btn btn-default" data-dismiss="modal">
+        Скасувати
+    </button>
+</div>
+<!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+</div>
+</div>
+
+
 
 <script type="text/javascript">
 
@@ -148,6 +490,24 @@
         selectedBackColor: "#7386D5",
         showBorder: false
     });
+
+    
+
+    $('#createPartnerGroupBtn').click(function () {
+
+        $('#modalPartnerGroupForm').appendTo("body").modal('show');
+    });
+
+    $('#createPartnerBtn').click(function () {
+
+        $('#modalPartnerForm').appendTo("body").modal('show');
+    });
+
+    $('#options').click(function () {
+
+        $('button').appendTo("body").modal('show');
+    });
+
 
 </script>
 
